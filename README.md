@@ -1,6 +1,6 @@
 # pmt-sited
 
-> A Vue.js project
+> A Vue.js Sited
 
 ## Build Setup
 
