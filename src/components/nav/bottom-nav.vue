@@ -90,6 +90,7 @@ export default {}
         background-color: $gray-nav-color;
         display: flex;
         align-items: center;
+        margin-top: 70px;
     }
     .newsletter {
         width: 75%;

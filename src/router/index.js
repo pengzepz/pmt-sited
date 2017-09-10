@@ -9,12 +9,18 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'index',
+      // name: 'index',
       component: Index,
       children: [
         {
           path: '',
-          component: First
+          component: First,
+          children: [
+            {
+              path: '',
+              component: First
+            }
+          ]
         }
       ]
     }

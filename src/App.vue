@@ -11,6 +11,6 @@ export default {
 </script>
 
 <style lang='scss'>
-@import url("http://at.alicdn.com/t/font_409364_wjprvlk7pewpcik9.css");
+@import url("http://at.alicdn.com/t/font_409364_v7ocpoz9valqsemi.css");
 @import "./assets/css/public.scss";
 </style>
