@@ -1,35 +1,26 @@
 <template lang="html">
-  <div class="panel-1">
+  <div class="panel">
     <div class="img-wrap">
-      <img src="../assets/img/panel-1.png" alt="">
+      <img :src="topImg" alt="">
     </div>
     <div class="body">
-      <body-left :data='data'>
-        <p><i class='iconfont icon-icon2'></i>bath furniture and accessories</p>
-        <p><i class='iconfont icon-icon2'></i>spa gift sets</p>
+      <body-left :data='data.leftData'>
+        <p v-for="(v, i) in data.leftData['list']" :key='i'><i class='iconfont icon-icon2'></i>{{v}}</p>
       </body-left>
-      <body-main :title='data.title' :imgList='imgs'></body-main>
+      <body-main :title='data.mainData.title' :imgList='data.mainData.imgs'></body-main>
     </div>
 
   </div>
 </template>
 
 <script>
-import bodyLeft from '../components/panel-body-left'
-import bodyMain from '../components/panel-body-main'
+import bodyLeft from '@/components/panel-body-left'
+import bodyMain from '@/components/panel-body-main'
 export default {
   data() {
-    return {
-      data: {
-        title: 'bath and body',
-        list: ['bath furniture and accessories', 'spa gift sets'],
-      },
-      imgs: ['http://cdn.dxf-app.shangcars.cn/QRcode.png', 'http://cdn.dxf-app.shangcars.cn/QRcode.png', 'http://cdn.dxf-app.shangcars.cn/QRcode.png', 'http://cdn.dxf-app.shangcars.cn/QRcode.png', 'http://cdn.dxf-app.shangcars.cn/QRcode.png',
-        'http://cdn.dxf-app.shangcars.cn/QRcode.png', 'http://cdn.dxf-app.shangcars.cn/QRcode.png', 'http://cdn.dxf-app.shangcars.cn/QRcode.png', 'http://cdn.dxf-app.shangcars.cn/QRcode.png', 'http://cdn.dxf-app.shangcars.cn/QRcode.png',
-        'http://cdn.dxf-app.shangcars.cn/QRcode.png', 'http://cdn.dxf-app.shangcars.cn/QRcode.png', 'http://cdn.dxf-app.shangcars.cn/QRcode.png'
-      ]
-    }
+    return {}
   },
+  props: ['topImg', 'data'],
   components: {
     'body-left': bodyLeft,
     'body-main': bodyMain
@@ -39,7 +30,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../assets/css/common-style.scss";
-.panel-1 {
+.panel {
     width: 76%;
     margin: 0 auto;
     .img-wrap {
