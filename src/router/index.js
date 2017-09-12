@@ -20,26 +20,30 @@ export default new Router({
       children: [
         {
           path: '',
+          // name: 'first/:id',
+          component: First
+        }, {
+          path: 'b-and-b/:id',
           name: 'first',
           component: First
         }, {
-          path: 'garden',
+          path: 'garden/:id',
           name: 'second',
           component: Second
         }, {
-          path: 'glass-craft-supplies',
+          path: 'glass-craft-supplies/:id',
           name: 'third',
           component: Third
         }, {
-          path: 'giftware',
+          path: 'giftware/:id',
           name: 'fourth',
           component: Fourth
         }, {
-          path: 'home-decor',
+          path: 'home-decor/:id',
           name: 'fifth',
           component: Fifth
         }, {
-          path: 'toys-and-games',
+          path: 'toys-and-games/:id',
           name: 'sixth',
           component: Sixth
         }, {

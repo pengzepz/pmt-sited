@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="top-nav">
-      <div class="inner">
+      <div class="inner" @mouseenter='hideHoverPanel'>
         <span>
           <img src="../../assets/img/logo.png" alt="">
         </span>
@@ -25,10 +25,20 @@
 </template>
 
 <script>
+import {
+  mapMutations
+} from 'vuex'
 import navList from '@/components/nav/top-nav-list'
 export default {
   components: {
     'nav-list': navList
+  },
+  methods: {
+    ...mapMutations(['CHANGENAVLISTHOVERNUM']),
+    hideHoverPanel() {
+      this.CHANGENAVLISTHOVERNUM(null);
+      console.log('tophidehover');
+    }
   }
 }
 </script>

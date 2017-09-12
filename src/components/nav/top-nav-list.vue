@@ -5,9 +5,9 @@
         <i class='iconfont icon-f11'></i>
         <span>{{item}}</span>
       </span> -->
-      <router-link tag='span'  v-for="(item, index) in items" :to="{name: item.link}" class='route' :key='index'>
+      <router-link tag='span'  v-for="(item, index) in items" :to="{name: item.link, params: {id: 0}}" class='route' :key='index'>
         <i class='iconfont icon-f11'></i>
-        <span>{{item.name}}</span>
+        <span  @mouseenter='showHoverPanel(index)'  @mouseleave='hideHoverPanel(index)'>{{item.name}}</span>
       </router-link>
     </div>
     <div class="right">
@@ -21,8 +21,10 @@
 </template>
 
 <script>
+import {
+  mapMutations
+} from 'vuex'
 import navHover from '@/components/nav/nav-list-hover'
-
 export default {
   data() {
     return {
@@ -55,6 +57,19 @@ export default {
   },
   components: {
     'nav-hover': navHover
+  },
+  methods: {
+    ...mapMutations(['CHANGENAVLISTHOVERNUM']),
+    showHoverPanel(num) {
+      console.log(num);
+      this.CHANGENAVLISTHOVERNUM(num);
+      console.log(this.$store.state.navHoverNum, 'store');
+    },
+    hideHoverPanel() {
+      console.log('hidden');
+      // this.CHANGENAVLISTHOVERNUM(1);
+      // this.CHANGENAVLISTHOVERNUM(null);
+    }
   }
 }
 </script>
@@ -65,6 +80,7 @@ export default {
     height: 35px;
     margin: 0 auto;
     display: flex;
+    z-index: 9;
     .left-list {
         width: 80%;
         height: 100%;
