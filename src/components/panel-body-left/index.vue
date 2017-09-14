@@ -50,7 +50,7 @@ export default {
         color: $gray-bottom-color;
         font-size: 6px;
         text-transform: capitalize;
-        margin: 6px 0 0 6px;
+        margin: 12px 0 0 6px;
 
         i {
             margin-right: 3px;

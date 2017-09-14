@@ -11,8 +11,8 @@ Vue.config.productionTip = false
 
 // import '@/components/muse-ui'
 //引用ele-ui组件库
-import '@/components/element-ui'
-
+// import '@/components/element-ui'
+require('@/components/element-ui')
 /* eslint-disable no-new */
 new Vue({el: '#app', router, store, template: '<App/>', components: {
     App

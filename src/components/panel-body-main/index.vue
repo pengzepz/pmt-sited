@@ -2,7 +2,10 @@
   <div class="body-main">
     <div class="top-panel">
       <p>{{title}}</p>
-      <p><span>Sort by</span> <input type="text" name="" value="" readonly='readonly' placeholder='Featured items'><i class='iconfont icon-f11'></i></p>
+
+        <div class="top-pagination">
+          <pagination :options='items' :totalPage='50'></pagination>
+        </div>
     </div>
     <div class="img-list">
       <div class="list"  v-for='(item, index) in imgList' :key='index'>
@@ -11,12 +14,53 @@
         <p>{{item.price}}</p>
       </div>
     </div>
+    <div class="bottom-pagination">
+      <pagination :options='items' :totalPage='50'></pagination>
+    </div>
   </div>
 </template>
 
 <script>
+import pagination from '@/components/pagination'
 export default {
-  props: ['title', 'imgList']
+  props: ['title', 'imgList'],
+  data() {
+    return {
+      items: [{
+          value: '选项1',
+          label: 'Newest Items'
+        },
+        {
+          value: '选项2',
+          label: 'Bestselling'
+        },
+        {
+          value: '选项3',
+          label: 'Alphabetical: A to Z'
+        },
+        {
+          value: '选项4',
+          label: 'Alphabetical: Z to A'
+        },
+        {
+          value: '选项5',
+          label: 'Customer Review'
+        },
+        {
+          value: '选项6',
+          label: 'Price: Low to High'
+        },
+        {
+          value: '选项7',
+          label: 'Price: High to Low'
+        }
+      ],
+      value: ''
+    }
+  },
+  components: {
+    'pagination': pagination
+  }
 }
 </script>
 
@@ -29,31 +73,34 @@ export default {
             font-size: 12px;
             color: #5c5b5b;
         }
-        p:nth-child(2) {
-            display: flex;
-            align-items: center;
-            height: 18px;
-            margin-top: 6px;
-            span {
-                font-size: 10px;
-            }
-            input {
-                width: 25%;
-                height: 100%;
-                font-style: italic;
-                border: 1px solid $gray-border;
-                margin-left: 10px;
-
-            }
-            i {
-                height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border: 1px solid $gray-border;
-                border-left: none;
-            }
+        .top-pagination {
+            margin-top: 10px;
         }
+        // p:nth-child(2) {
+        //     display: flex;
+        //     align-items: center;
+        //     height: 18px;
+        //     margin-top: 6px;
+        //     span {
+        //         font-size: 10px;
+        //     }
+        //     input {
+        //         width: 25%;
+        //         height: 100%;
+        //         font-style: italic;
+        //         border: 1px solid $gray-border;
+        //         margin-left: 10px;
+        //
+        //     }
+        //     i {
+        //         height: 100%;
+        //         display: flex;
+        //         align-items: center;
+        //         justify-content: center;
+        //         border: 1px solid $gray-border;
+        //         border-left: none;
+        //     }
+        // }
     }
     .img-list {
         width: 100%;
@@ -82,6 +129,9 @@ export default {
                 text-align: left;
             }
         }
+    }
+    .bottom-pagination {
+        margin-top: 50px;
     }
 }
 </style>

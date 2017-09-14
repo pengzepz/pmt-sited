@@ -15,9 +15,10 @@
             <p>Questions?<span>1-888-288-1697</span></p>
           </div>
           <div class="right-bottom">
-            <input type="text" name="" value="" placeholder='Search keywork or item #'>
+            <input type="text" name="" value="" placeholder='Search keywork or item #' v-model='value' @input='inputExplore()'>
             <i class='iconfont icon-sousuo'></i>
           </div>
+          <explore-result class='results' v-show='explore' :items='itemList'></explore-result>
         </div>
       </div>
       <nav-list></nav-list>
@@ -29,15 +30,62 @@ import {
   mapMutations
 } from 'vuex'
 import navList from '@/components/nav/top-nav-list'
+import exploreResult from '@/components/explore-results'
 export default {
+  data() {
+    return {
+      results: false,
+      value: null,
+      itemList: [{
+          src: 'http://cdn.dxf-app.shangcars.cn/QRcode.png',
+          name: 'commodity',
+          'price': '18'
+        },
+        {
+          src: 'http://cdn.dxf-app.shangcars.cn/QRcode.png',
+          name: 'commodity',
+          'price': '15'
+        },
+        {
+          src: 'http://cdn.dxf-app.shangcars.cn/QRcode.png',
+          name: 'commodity',
+          'price': '14'
+        },
+        {
+          src: 'http://cdn.dxf-app.shangcars.cn/QRcode.png',
+          name: 'commodity',
+          'price': '19'
+        },
+        {
+          src: 'http://cdn.dxf-app.shangcars.cn/QRcode.png',
+          name: 'commodity',
+          'price': '18'
+        }
+      ]
+    }
+  },
   components: {
-    'nav-list': navList
+    'nav-list': navList,
+    'explore-result': exploreResult
+  },
+  computed: {
+    explore() {
+      if (this.results) {
+        return true;
+      } else {
+        return false;
+      }
+    }
   },
   methods: {
     ...mapMutations(['CHANGENAVLISTHOVERNUM']),
     hideHoverPanel() {
       this.CHANGENAVLISTHOVERNUM(null);
       console.log('tophidehover');
+    },
+    inputExplore() {
+
+      this.value ? this.results = true : this.results = false;
     }
   }
 }
@@ -61,6 +109,7 @@ export default {
             display: flex;
             justify-content: space-around;
             flex-flow: column;
+            position: relative;
             .right-top {
                 width: 80%;
                 display: flex;
@@ -103,6 +152,11 @@ export default {
                     align-items: center;
                     justify-content: center;
                 }
+            }
+            .results {
+                position: absolute;
+                bottom: -373%;
+                z-index: 999999999;
             }
         }
     }
