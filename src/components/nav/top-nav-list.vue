@@ -5,7 +5,7 @@
         <i class='iconfont icon-f11'></i>
         <span>{{item}}</span>
       </span> -->
-      <router-link tag='span'  v-for="(item, index) in items" :to="{name: item.link, params: {id: 0}}" class='route' :key='index'>
+      <router-link tag='span'  v-for="(item, index) in items" :to="{name: item.link, params: {id: 'index'}}" class='route' :key='index'>
         <i class='iconfont icon-f11'></i>
         <span  @mouseenter='showHoverPanel(index)'  @mouseleave='hideHoverPanel(index)'>{{item.name}}</span>
       </router-link>

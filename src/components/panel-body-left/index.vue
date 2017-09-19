@@ -3,14 +3,8 @@
     <div class="top-part">
       <p class='title'>{{item.title}}</p>
       <div class="slots">
-        <!-- <slot v-for='(item, index) in item.list.length'></slot> -->
         <slot></slot>
       </div>
-      <!-- <slot></slot>
-      <slot></slot>
-      <slot></slot>
-      <slot></slot>
-      <slot></slot> -->
     </div>
     <div class="bottom-part">
       <p class='title'></i>shop by price</p>
@@ -51,6 +45,7 @@ export default {
         font-size: 6px;
         text-transform: capitalize;
         margin: 12px 0 0 6px;
+        cursor: pointer;
 
         i {
             margin-right: 3px;

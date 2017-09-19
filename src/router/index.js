@@ -9,6 +9,9 @@ import Fourth from '@/views/giftware'
 import Fifth from '@/views/home-decor'
 import Sixth from '@/views/toys-and-games'
 import Seventh from '@/views/new-arrivals'
+import AboutUs from '@/views/about-us'
+import ContactUs from '@/views/contact-us'
+import PrivacyPolicy from '@/views/privacy-policy'
 Vue.use(Router)
 
 export default new Router({
@@ -50,8 +53,22 @@ export default new Router({
           path: 'new-arrivals',
           name: 'seventh',
           component: Seventh
+        },
+        {
+          path: 'about-us',
+          name: 'aboutUs',
+          component: AboutUs
+        },
+        {
+          path: 'contact-us',
+          name: 'contactUs',
+          component: ContactUs
+        },
+        {
+          path: 'privacy-policy',
+          name: 'privacyPolicy',
+          component: PrivacyPolicy
         }
-
       ]
     }
   ]

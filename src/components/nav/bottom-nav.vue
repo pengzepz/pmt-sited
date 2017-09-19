@@ -20,10 +20,10 @@
         <span class='title'>company info</span>
         <span class='li-list'>
           <p class='left'>
-            <span>about us</span>
-            <span>contact us</span>
+            <router-link tag='span' :to="{name: 'aboutUs'}">about us</router-link>
+            <router-link tag='span' :to="{name: 'contactUs'}">contact us</router-link>
             <span>blog</span>
-            <span>privacy policy</span>
+            <router-link tag='span' :to="{name: 'privacyPolicy'}">privacy policy</router-link>
           </p>
         <span class='right'>
           <span>product index</span>
@@ -136,6 +136,7 @@ export default {}
                 background-color: white;
                 border: 1px solid $gray-border;
                 border-left: none;
+                cursor: progress;
             }
         }
 
@@ -162,6 +163,7 @@ export default {}
                 span {
                     color: $gray-bottom-color;
                     font-size: 6px;
+                    cursor: pointer;
                 }
             }
             .li-1,

@@ -1,5 +1,15 @@
-input {
+input, textarea {
   padding-left: 10px;
   font-style: italic;
   border: none;
+}
+button{
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+*{
+      font-family: 'Ubuntu', serif;
 }
