@@ -27,8 +27,8 @@
           </p>
         <span class='right'>
           <span>product index</span>
-          <span>catefory index</span>
-          <span>shipping & returns</span>
+          <router-link tag='span' :to="{name: 'categoryIndex'}">catefory index</router-link>
+          <router-link tag='span' :to="{name: 'shipping'}">shipping & returns</router-link>
         </span>
 
       </span>
@@ -159,11 +159,15 @@ export default {}
                     font-size: 10px;
                     display: flex;
                     text-transform: capitalize;
+                    cursor: text;
                 }
                 span {
                     color: $gray-bottom-color;
                     font-size: 6px;
                     cursor: pointer;
+                    &:hover {
+                        color: black;
+                    }
                 }
             }
             .li-1,

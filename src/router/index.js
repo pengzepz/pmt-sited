@@ -12,6 +12,8 @@ import Seventh from '@/views/new-arrivals'
 import AboutUs from '@/views/about-us'
 import ContactUs from '@/views/contact-us'
 import PrivacyPolicy from '@/views/privacy-policy'
+import CategoryIndex from '@/views/category-index'
+import Shipping from '@/views/shipping'
 Vue.use(Router)
 
 export default new Router({
@@ -68,6 +70,16 @@ export default new Router({
           path: 'privacy-policy',
           name: 'privacyPolicy',
           component: PrivacyPolicy
+        },
+        {
+          path: 'category-index',
+          name: 'categoryIndex',
+          component: CategoryIndex
+        },
+        {
+          path: 'shipping',
+          name: 'shipping',
+          component: Shipping
         }
       ]
     }

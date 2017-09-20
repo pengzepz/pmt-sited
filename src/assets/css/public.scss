@@ -13,3 +13,10 @@ button{
 *{
       font-family: 'Ubuntu', serif;
 }
+a{
+  color: #323433;
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
+}
