@@ -15,12 +15,12 @@ export default {
 <style lang="scss">
 // @import "../../assets/css/common-style.scss";
 ul {
-    padding-left: 0.6rem;
+    padding-left: 22px;
     color: #000;
     font-size: 12px;
     li {
         list-style: initial;
-        margin-top: 0.3rem;
+        margin-top: 10px;
     }
 }
 </style>

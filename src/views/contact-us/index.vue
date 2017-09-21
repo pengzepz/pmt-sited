@@ -54,9 +54,9 @@ export default {}
     .body {
         display: flex;
         width: 80%;
-        margin: 0.5rem auto;
+        margin: 18px auto;
         .right-form {
-            margin-left: 0.5rem;
+            margin-left: 18px;
             display: flex;
             flex-flow: column;
             .desc {
@@ -69,7 +69,7 @@ export default {}
             input,
             textarea {
                 border: 1px solid $gray-border;
-                margin-top: 0.5rem;
+                margin-top: 18px;
                 font-family: 'Ubuntu', sans-serif;
                 font-size: 10px;
                 color: #b6afa7;
@@ -77,7 +77,7 @@ export default {}
                 font-weight: 400;
             }
             input {
-                height: 0.6rem;
+                height: 20px;
             }
             textarea {
                 resize: none;
@@ -89,15 +89,15 @@ export default {}
                 display: flex;
                 align-items: center;
                 justify-content: flex-end;
-                margin: 0.5rem 0.5rem 0 0;
+                margin: 18px 18px 0 0;
                 span {
                     font-size: 10px;
                     color: #7082b3;
-                    margin-right: 0.5rem;
+                    margin-right: 18px;
                 }
                 button {
-                    width: 1.5rem;
-                    height: 0.7rem;
+                    width: 50px;
+                    height: 26px;
                     background: #7082b3;
                     font-size: 14px;
                     color: #fff;
@@ -107,7 +107,7 @@ export default {}
             }
             .list {
                 display: flex;
-                margin-top: 0.5rem;
+                margin-top: 18px;
                 justify-content: space-around;
                 .li {
                     width: 30%;
@@ -115,7 +115,7 @@ export default {}
                     p {
                         width: 100%;
                         text-align: center;
-                        margin-top: 0.1rem;
+                        margin-top: 4px;
                         line-height: 14px;
                         font-family: 'Unbuntu',sans-serif;
                         font-weight: 300;
@@ -132,7 +132,7 @@ export default {}
     }
     .contact-us-lower-text {
         width: 80%;
-        margin: 1rem auto;
+        margin: 37px auto;
         color: #bbb5ae;
     }
 }

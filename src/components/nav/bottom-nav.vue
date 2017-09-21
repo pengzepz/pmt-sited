@@ -44,8 +44,9 @@
             <span>wishlist</span>
           </span>
         <span class='right'>
-          <span>terms & conditions</span>
-          <span>help</span>
+          <router-link tag='span' :to="{name: 'terms'}">terms & conditions</router-link>
+          <router-link tag='span' :to="{name: 'help'}">help</router-link>
+
         </span>
         </span>
 

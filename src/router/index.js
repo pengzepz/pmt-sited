@@ -14,6 +14,8 @@ import ContactUs from '@/views/contact-us'
 import PrivacyPolicy from '@/views/privacy-policy'
 import CategoryIndex from '@/views/category-index'
 import Shipping from '@/views/shipping'
+import Help from '@/views/help'
+import Terms from '@/views/terms-conditions'
 Vue.use(Router)
 
 export default new Router({
@@ -80,6 +82,16 @@ export default new Router({
           path: 'shipping',
           name: 'shipping',
           component: Shipping
+        },
+        {
+          path: 'help',
+          name: 'help',
+          component: Help
+        },
+        {
+          path: 'terms',
+          name: 'terms',
+          component: Terms
         }
       ]
     }

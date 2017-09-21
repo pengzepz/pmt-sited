@@ -52,7 +52,7 @@ export default {
     .body {
         display: flex;
         width: 80%;
-        margin: 1rem auto;
+        margin: 37px auto;
         font-size: 10px;
         .p1,
         .p2 {
@@ -61,7 +61,7 @@ export default {
             flex-flow: column;
             align-items: center;
             li {
-                margin-top: 0.2rem;
+                margin-top: 8px;
                 cursor: pointer;
                 &:hover {
                     color: $gray-color;

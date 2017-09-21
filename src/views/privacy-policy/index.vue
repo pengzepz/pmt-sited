@@ -66,10 +66,10 @@ export default {
     .body-content {
         // border: 1px solid red;
         width: 80%;
-        margin: 0.5rem auto;
+        margin: 18px auto;
         .panel {
-            margin-top: 1rem;
-            padding: 0.5rem 0 0 0.5rem;
+            margin-top: 37px;
+            padding: 18px 0 0 18px;
         }
         .question {
             color: #7082b3;
@@ -82,12 +82,12 @@ export default {
             .desc {
                 color: #000;
                 font-size: 12px;
-                padding-left: 0.2rem;
+                padding-left: 8px;
             }
         }
         .p3 {
             .desc {
-                margin-top: 0.5rem;
+                margin-top: 18px;
             }
         }
     }

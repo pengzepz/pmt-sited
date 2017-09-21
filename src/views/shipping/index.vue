@@ -100,12 +100,12 @@ export default {}
     }
     .body {
         width: 80%;
-        margin: 1rem auto;
+        margin: 37px auto;
         .title {
             font-size: 20px;
             color: #7082b3;
             font-style: italic;
-            margin-bottom: 0.3rem;
+            margin-bottom: 11px;
             display: flex;
             align-items: center;
         }
@@ -116,7 +116,7 @@ export default {}
         }
         .content {
             width: 70%;
-            padding-left: 0.5rem;
+            padding-left: 18px;
             color: #323433;
             font-size: 11px;
             font-family: Ubuntu, sans-serif;
@@ -128,33 +128,33 @@ export default {}
         .p4,
         .p5,
         .p6 {
-            margin-bottom: 1rem;
+            margin-bottom: 37px;
         }
         .p1 {
             .c2 {
-                margin-top: 0.5rem;
+                margin-top: 18px;
             }
         }
         .p4 {
             .mid {
                 display: flex;
                 justify-content: flex-start;
-                margin: 0.5rem 0 0 0.5rem;
+                margin: 18px 0 0 18px;
             }
             .c2 {
-                margin-top: 0.5rem;
+                margin-top: 18px;
             }
         }
         .p5 {
             .p5-m-c {
                 .content {
                     width: 90%;
-                    margin-top: 0.3rem;
+                    margin-top: 11px;
                 }
                 .comment {
                     background: #e3e3e3;
                     padding: 10px;
-                    margin-top: 0.3rem;
+                    margin-top: 11px;
                     font-size: 13px;
                 }
             }
@@ -173,8 +173,8 @@ export default {}
                     vertical-align: middle;
                     border-color: inherit;
                     th {
-                        width: 7rem;
-                        height: 0.5rem;
+                        width: 260px;
+                        height: 18px;
                         text-align: center;
                         font-size: 8px;
                         color: #fff;
@@ -184,8 +184,8 @@ export default {}
                         background-color: #7082b2;
                     }
                     td {
-                        width: 7rem;
-                        height: 0.5rem;
+                        width: 260px;
+                        height: 18px;
                         text-align: center;
                         letter-spacing: 1px;
                     }

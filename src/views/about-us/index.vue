@@ -45,8 +45,8 @@ export default {}
     .main {
         display: flex;
         width: 80%;
-        height: 10rem;
-        margin: 1rem auto;
+        height: 375px;
+        margin: 37px auto;
         justify-content: space-between;
         // border: 1px solid red;
         .right-content {
@@ -70,7 +70,7 @@ export default {}
                     color: #907e68;
                     font-weight: 300;
                     border-left: 6px solid #907e68;
-                    padding-left: 0.1rem;
+                    padding-left: 4px;
                     text-align: justify;
                 }
             }
