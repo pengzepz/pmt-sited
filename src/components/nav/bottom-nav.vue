@@ -38,7 +38,8 @@
         <span class='title'>my account</span>
         <span class='li-list'>
           <span class='left'>
-            <span>login</span>
+            <!-- <span></span> -->
+            <router-link tag='span' :to="{name: 'signIn'}">login</router-link>
             <span>order status</span>
             <span>view cart</span>
             <span>wishlist</span>

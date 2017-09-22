@@ -16,6 +16,8 @@ import CategoryIndex from '@/views/category-index'
 import Shipping from '@/views/shipping'
 import Help from '@/views/help'
 import Terms from '@/views/terms-conditions'
+import SignIn from '@/views/sign-in-or-create-account'
+import CreateAccount from '@/views/create-an-account'
 Vue.use(Router)
 
 export default new Router({
@@ -92,6 +94,16 @@ export default new Router({
           path: 'terms',
           name: 'terms',
           component: Terms
+        },
+        {
+          path: 'sign-in',
+          name: 'signIn',
+          component: SignIn
+        },
+        {
+          path: 'create-account',
+          name: 'createAccount',
+          component: CreateAccount
         }
       ]
     }
