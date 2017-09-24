@@ -18,6 +18,7 @@ import Help from '@/views/help'
 import Terms from '@/views/terms-conditions'
 import SignIn from '@/views/sign-in-or-create-account'
 import CreateAccount from '@/views/create-an-account'
+import CommodityDetails from '@/views/commodity-details'
 Vue.use(Router)
 
 export default new Router({
@@ -104,6 +105,11 @@ export default new Router({
           path: 'create-account',
           name: 'createAccount',
           component: CreateAccount
+        },
+        {
+          path: 'commodity-details',
+          name: 'commodityDetails',
+          component: CommodityDetails
         }
       ]
     }

@@ -9,7 +9,7 @@
             <p>
               <span>my account</span>
               <span>wishlist</span>
-              <span>about us</span>
+              <router-link tag='span' :to="{name: 'aboutUs'}">about us</router-link>
               <span>blog</span>
             </p>
             <p>Questions?<span>1-888-288-1697</span></p>
@@ -124,6 +124,9 @@ export default {
                     color: $gray-color;
                     text-transform: uppercase;
                     font-size: 6px;
+                    span {
+                        cursor: pointer;
+                    }
                 }
                 p:nth-child(2) {
                     color: $gray-q-color;

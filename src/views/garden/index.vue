@@ -9,7 +9,7 @@ import bodyPanel from '@/components/panel-body'
 export default {
   data() {
     return {
-      topImg: 'http://ou7kw8mxw.bkt.clouddn.com/panel-1.png',
+      topImg: 'http://ow5947qyd.bkt.gdipper.com/p2.png',
       obj: {
         leftData: {
           title: 'bath and body',

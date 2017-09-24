@@ -9,9 +9,10 @@
     </div>
     <div class="img-list">
       <div class="list"  v-for='(item, index) in imgList' :key='index'>
-        <img :alt="item.desc" :src="item.src">
-        <p class='desc'>{{item.desc}}</p>
+        <img :alt="item.desc" :src="item.src" :class="hov == index ? 'mouse-enter' : 'mouse-leave'" @mouseenter='mEnter(index)' @mouseleave='mLeave()'>
+        <p class='desc' @click='catDetails(item)'>{{item.desc}}</p>
         <p>{{item.price}}</p>
+        <span class='quick' v-show="hov == index ? true : false">QUICK VIEW</span>
       </div>
     </div>
     <div class="bottom-pagination">
@@ -22,6 +23,9 @@
 
 <script>
 import pagination from '@/components/pagination'
+import {
+  mapMutations
+} from 'vuex'
 export default {
   props: ['title', 'imgList'],
   data() {
@@ -55,11 +59,27 @@ export default {
           label: 'Price: High to Low'
         }
       ],
-      value: ''
+      value: '',
+      hov: null
     }
   },
   components: {
     'pagination': pagination
+  },
+  methods: {
+    ...mapMutations(['COMMODITYDETAILS']),
+    catDetails(item) {
+      this.COMMODITYDETAILS(item);
+      this.$router.push({
+        name: 'commodityDetails'
+      });
+    },
+    mEnter(index) {
+      this.hov = index;
+    },
+    mLeave() {
+      this.hov = null;
+    }
   }
 }
 </script>
@@ -76,31 +96,6 @@ export default {
         .top-pagination {
             margin-top: 10px;
         }
-        // p:nth-child(2) {
-        //     display: flex;
-        //     align-items: center;
-        //     height: 18px;
-        //     margin-top: 6px;
-        //     span {
-        //         font-size: 10px;
-        //     }
-        //     input {
-        //         width: 25%;
-        //         height: 100%;
-        //         font-style: italic;
-        //         border: 1px solid $gray-border;
-        //         margin-left: 10px;
-        //
-        //     }
-        //     i {
-        //         height: 100%;
-        //         display: flex;
-        //         align-items: center;
-        //         justify-content: center;
-        //         border: 1px solid $gray-border;
-        //         border-left: none;
-        //     }
-        // }
     }
     .img-list {
         width: 100%;
@@ -112,16 +107,40 @@ export default {
             text-align: center;
             margin-top: 10px;
             margin-right: 10px;
+            position: relative;
+            .quick {
+                display: inline-flex;
+                width: 60px;
+                height: 25px;
+                align-items: center;
+                justify-content: center;
+                font-size: 8px;
+                background-color: rgba(0,0,0,.5);
+                color: white;
+                position: absolute;
+                top: 65px;
+                left: 50%;
+                transform: translateX(-50%);
+                cursor: pointer;
+            }
+            .mouse-enter {
+                opacity: 0.6;
+            }
+            .mouse-leave {
+                opacity: 1;
+            }
             img {
                 width: 110px;
                 height: 142px;
                 margin: 6px 0;
                 border: 1px solid $gray-border;
+                cursor: pointer;
             }
             p:nth-of-type(1) {
                 width: 100px;
                 margin: 0 auto 3px;
                 text-align: left;
+                cursor: pointer;
             }
             p:nth-of-type(2) {
                 width: 100px;
