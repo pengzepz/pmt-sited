@@ -17,5 +17,6 @@ export default {
     'http://ou7kw8mxw.bkt.clouddn.com/p5.png',
     'http://ou7kw8mxw.bkt.clouddn.com/p6.png'
   ],
-  commodityDetails: {}//商品详情
+  commodityDetails: {},//商品详情
+  maskStatus: false
 }

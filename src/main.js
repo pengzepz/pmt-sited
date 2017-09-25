@@ -4,8 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from '@/store'
+import initScroll from '@/plugins/init-scroll'
 Vue.config.productionTip = false
-
+Vue.use(initScroll);
 //引用muse-ui组件库
 // require('@/components/muse-ui');
 

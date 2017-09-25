@@ -9,12 +9,13 @@
     </div>
     <div class="img-list">
       <div class="list"  v-for='(item, index) in imgList' :key='index'>
-        <img :alt="item.desc" :src="item.src" :class="hov == index ? 'mouse-enter' : 'mouse-leave'" @mouseenter='mEnter(index)' @mouseleave='mLeave()'>
+        <img :alt="item.desc" :src="item.src" :class="hov == index ? 'mouse-enter' : 'mouse-leave'" @click='catDetails(item)' @mouseenter='mEnter(index)' @mouseleave='mLeave()'>
         <p class='desc' @click='catDetails(item)'>{{item.desc}}</p>
         <p>{{item.price}}</p>
-        <span class='quick' v-show="hov == index ? true : false">QUICK VIEW</span>
+        <span class='quick' v-show="hov == index ? true : false" @click='showMask()' @mouseenter='mEnter(index)'>QUICK VIEW</span>
       </div>
     </div>
+    <commodity-quick v-show='maskStatus'></commodity-quick>
     <div class="bottom-pagination">
       <pagination :options='items' :totalPage='50'></pagination>
     </div>
@@ -23,8 +24,10 @@
 
 <script>
 import pagination from '@/components/pagination'
+import commodityQuick from '@/components/commodity-quick-view'
 import {
-  mapMutations
+  mapMutations,
+  mapState
 } from 'vuex'
 export default {
   props: ['title', 'imgList'],
@@ -64,10 +67,14 @@ export default {
     }
   },
   components: {
-    'pagination': pagination
+    'pagination': pagination,
+    'commodity-quick': commodityQuick
+  },
+  computed: {
+    ...mapState(['maskStatus'])
   },
   methods: {
-    ...mapMutations(['COMMODITYDETAILS']),
+    ...mapMutations(['COMMODITYDETAILS', 'CHANGEMASKSRATUS']),
     catDetails(item) {
       this.COMMODITYDETAILS(item);
       this.$router.push({
@@ -79,6 +86,10 @@ export default {
     },
     mLeave() {
       this.hov = null;
+    },
+    showMask() {
+      this.CHANGEMASKSRATUS(true);
+      console.log(this.$store.state.maskStatus);
     }
   }
 }
