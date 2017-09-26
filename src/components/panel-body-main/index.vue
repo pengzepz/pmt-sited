@@ -2,7 +2,6 @@
   <div class="body-main">
     <div class="top-panel">
       <p>{{title}}</p>
-
         <div class="top-pagination">
           <pagination :options='items' :totalPage='50'></pagination>
         </div>

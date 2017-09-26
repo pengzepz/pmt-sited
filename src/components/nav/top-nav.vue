@@ -2,15 +2,15 @@
   <div class="top-nav">
       <div class="inner" @mouseenter='hideHoverPanel'>
         <span>
-          <img src="../../assets/img/logo.png" alt="">
+          <img src="../../assets/img/logo.png" alt="" @click='home()' style='cursor:pointer'>
         </span>
         <div class="right">
           <div class="right-top">
             <p>
-              <span>my account</span>
-              <span>wishlist</span>
+              <span @click='$developing()'>my account</span>
+              <span @click='$developing()'>wishlist</span>
               <router-link tag='span' :to="{name: 'aboutUs'}">about us</router-link>
-              <span>blog</span>
+              <span @click='$developing()'>blog</span>
             </p>
             <p>Questions?<span>1-888-288-1697</span></p>
           </div>
@@ -31,6 +31,9 @@ import {
 } from 'vuex'
 import navList from '@/components/nav/top-nav-list'
 import exploreResult from '@/components/explore-results'
+// import {
+//   developing
+// } from '@/api/utils'
 export default {
   data() {
     return {
@@ -86,6 +89,9 @@ export default {
     inputExplore() {
 
       this.value ? this.results = true : this.results = false;
+    },
+    home() {
+      this.$router.push('/');
     }
   }
 }

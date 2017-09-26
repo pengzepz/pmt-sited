@@ -3,7 +3,7 @@ import lang from 'element-ui/lib/locale/lang/en'
 import locale from 'element-ui/lib/locale'
 locale.use(lang)
 
-import {Button, Select, Option, OptionGroup, Pagination, Collapse, CollapseItem, Autocomplete, Message
+import {Button, Select, Option, OptionGroup, Pagination, Collapse, CollapseItem, Autocomplete, Message, Notification
   // Form, FormItem, Tabs, Input
 } from 'element-ui'
 Vue.component(Button.name, Button)
@@ -15,6 +15,8 @@ Vue.use(Collapse)
 Vue.use(CollapseItem)
 Vue.use(Autocomplete)
 Vue.prototype.$message = Message
+Vue.prototype.$notify = Notification
+
 // Vue.use(Form)
 // Vue.use(FormItem)
 // Vue.use(Tabs)

@@ -9,7 +9,7 @@
           <li v-for='(item, index) in items' :key='index'>{{item}}</li>
         </ul>
         <!-- <button type="button" class='create-account' name="button"></button> -->
-        <router-link tag='buttom' class='create-account' :to="{name: 'createAccount'}">Click here to create a new account</router-link>
+        <router-link tag='button' class='create-account' :to="{name: 'createAccount'}">Click here to create a new account</router-link>
       </div>
       <div class="right-container">
         <p class='title'><i class='iconfont icon-icon2'></i>SIGN IN</p>

@@ -17,16 +17,16 @@
     <div class="bottom-list">
       <div class="wrapper">
       <p class='li-1'>
-        <span class='title'>company info</span>
+        <span class='title' @click='$developing()'>company info</span>
         <span class='li-list'>
           <p class='left'>
             <router-link tag='span' :to="{name: 'aboutUs'}">about us</router-link>
             <router-link tag='span' :to="{name: 'contactUs'}">contact us</router-link>
-            <span>blog</span>
+            <span @click='$developing()'>blog</span>
             <router-link tag='span' :to="{name: 'privacyPolicy'}">privacy policy</router-link>
           </p>
         <span class='right'>
-          <span>product index</span>
+          <span @click='$developing()'>product index</span>
           <router-link tag='span' :to="{name: 'categoryIndex'}">catefory index</router-link>
           <router-link tag='span' :to="{name: 'shipping'}">shipping & returns</router-link>
         </span>
@@ -35,14 +35,14 @@
 
       </p>
       <p class='li-2'>
-        <span class='title'>my account</span>
+        <span class='title' @click='$developing()'>my account</span>
         <span class='li-list'>
           <span class='left'>
             <!-- <span></span> -->
             <router-link tag='span' :to="{name: 'signIn'}">login</router-link>
-            <span>order status</span>
-            <span>view cart</span>
-            <span>wishlist</span>
+            <span @click='$developing()'>order status</span>
+            <span @click='$developing()'>view cart</span>
+            <span @click='$developing()'>wishlist</span>
           </span>
         <span class='right'>
           <router-link tag='span' :to="{name: 'terms'}">terms & conditions</router-link>
@@ -108,12 +108,12 @@ export default {}
             align-items: center;
             justify-content: space-between;
             i {
-                font-size: 25px;
+                font-size: 20px;
                 color: #999;
             }
             span:nth-of-type(1) {
                 color: #7082b3;
-                font-size: 14px;
+                font-size: 12px;
             }
         }
         .right-input {

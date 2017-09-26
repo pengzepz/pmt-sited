@@ -89,27 +89,28 @@ export default {
 
 <style media="screen">
 .el-collapse {
-  border: none;
+  border: 0 !important;
 }
 
 .el-collapse-item {
-  margin-top: 10px;
-  font-family: 'Ubuntu', sans-serif;
+  margin-top: 10px !important;
+  font-family: 'Ubuntu', sans-serif !important;
 }
 
 .el-collapse-item__header {
-  font-size: 16px;
-  color: #727fb4;
-  font-weight: 100;
-  font-style: italic;
-  border-top: none;
+  font-size: 16px !important;
+  color: #727fb4 !important;
+  font-weight: 100 !important;
+  font-style: italic !important;
+  border-top: 0 !important;
+  border-left: 0 !important;
 }
 
 .el-collapse-item__content {
-  color: #323433;
-  font-weight: bold;
-  font-size: 12px;
-  background-color: white;
+  color: #323433 !important;
+  font-weight: bold !important;
+  font-size: 12px !important;
+  background-color: white !important;
 }
 </style>
 <style lang="scss" scoped>
