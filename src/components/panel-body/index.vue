@@ -1,3 +1,10 @@
+<!--
+@Author: default
+@Date:   Sunday, December 17th 2017, 9:25:24 pm
+@Last modified by:   default
+@Last modified time: Sunday, December 17th 2017, 10:52:56 pm
+-->
+
 <template lang="html">
   <div class="panel">
     <div class="img-wrap">
@@ -16,14 +23,29 @@
 <script>
 import bodyLeft from '@/components/panel-body-left'
 import bodyMain from '@/components/panel-body-main'
+import {
+  mapMutations
+} from 'vuex'
 export default {
   data() {
     return {}
   },
   props: ['topImg', 'data'],
   components: {
-    'body-left': bodyLeft,
-    'body-main': bodyMain
+    bodyLeft,
+    bodyMain
+  },
+  watch: {
+    '$route' (to, from) {
+      // 对路由变化作出响应...
+      this.CHANGENAVLISTHOVERNUM(null);
+    }
+  },
+  created() {
+    this.CHANGENAVLISTHOVERNUM(null);
+  },
+  methods: {
+    ...mapMutations(['CHANGENAVLISTHOVERNUM'])
   }
 }
 </script>

@@ -1,6 +1,14 @@
+<!--
+@Author: default
+@Date:   Sunday, December 17th 2017, 10:33:47 pm
+@Last modified by:   default
+@Last modified time: Sunday, December 17th 2017, 10:36:34 pm
+-->
+
 <template lang="html">
   <div class="pagination">
-    <div class="left-filter">
+    <!-- 暂时隐藏排序,因产品太少 -->
+    <!-- <div class="left-filter">
       <span>Sort by</span>
       <el-select v-model="value" placeholder="Featured items" class='select'>
         <el-option
@@ -10,7 +18,7 @@
           :value="item.value">
         </el-option>
       </el-select>
-    </div>
+    </div> -->
 
     <!-- <el-pagination
   layout="prev, pager, next,jumper"
@@ -51,7 +59,8 @@ export default {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-between;
+    justify-content: flex-end;
     .left-filter {
         span:nth-of-type(1) {
             font-size: 10px;

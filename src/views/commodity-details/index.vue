@@ -1,3 +1,10 @@
+<!--
+@Author: default
+@Date:   Sunday, December 17th 2017, 10:37:02 pm
+@Last modified by:   default
+@Last modified time: Sunday, December 17th 2017, 10:37:02 pm
+-->
+
 <template lang="html">
   <div class="commodity-details">
     <div class="main">
@@ -19,12 +26,12 @@
             <p><span>Condition:</span><span>New</span></p>
             <p><span>Weight:</span><span>4.06  LBS</span></p>
             <p><span>Shipping:</span><span>Calculated at checkout</span></p>
-            <p class='qty'><span>QTY:</span><input type="text" name="" value="" v-model='qty'></p>
+            <!-- <p class='qty'><span>QTY:</span><input type="text" name="" value="" v-model='qty'></p> -->
           </div>
-          <div class="button-list">
+          <!-- <div class="button-list">
             <button type="button" name="button">ADD TO CART</button>
             <button type="button" name="button">add to Wishlist</button>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

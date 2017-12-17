@@ -1,9 +1,17 @@
+<!--
+@Author: default
+@Date:   Sunday, December 17th 2017, 9:35:33 pm
+@Last modified by:   default
+@Last modified time: Sunday, December 17th 2017, 10:42:20 pm
+-->
+
 <template lang="html">
   <div class="nav-hover" v-show='navHoverNum != null' @mouseenter='showHoverPanel(navHoverNum)' @mouseleave='hideHoverPanel()'>
     <p class='title'>{{titleList[navHoverNum]}}</p>
     <img :src="bgSrc" alt="" class='bg-img'>
     <div class="list">
-      <router-link tag='span' v-for='(item, index) in items[navHoverNum]' :key='index' :to='{name: numMapPath[navHoverNum], params:{id: item.name}}'><i class='iconfont icon-zhengfangxing'></i>{{item.name}}</router-link>
+      <!-- <router-link tag='span' v-for='(item, index) in items[navHoverNum]' @click='closeHover()' :key='index' :to='{name: numMapPath[navHoverNum], params:{id: item.name}}'><i class='iconfont icon-zhengfangxing'></i>{{item.name}}</router-link> -->
+      <span v-for='(item, index) in items[navHoverNum]' @click='closeHover(item)' :key='index'><i class='iconfont icon-zhengfangxing'></i>{{item.name}}</span>
     </div>
   </div>
 </template>
@@ -330,6 +338,17 @@ export default {
     },
     hideHoverPanel() {
       this.CHANGENAVLISTHOVERNUM(null);
+    },
+    closeHover(item) {
+      console.log(111);
+      // this.CHANGENAVLISTHOVERNUM(null);
+      this.$router.push({
+        name: this.numMapPath[this.navHoverNum],
+        params: {
+          id: item.name
+        }
+      });
+
     }
   }
 }
